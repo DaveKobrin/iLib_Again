@@ -5,18 +5,40 @@ A MongoDB / Node.js / Express.js Library management web app.
 > Include:<br />
 > General App Idea/Purpose<br />
 Track media assets owned and location of said assets
+
 > Models including field names and their datatypes<br />
 User
 * username - string, unique, required
 * password - string, reqired
 * type - string (normal(default), or admin(for stretch goals)) required(default - normal)
 
-Book
+Media
 * upc - string, unique
 * title - string
-* author - string
+* creator_name - string
+* creator_type - string (artist, director, author, etc.)
+* cover - string (link to image)
+* format - string (book, mag, cd , mp3, dvd, etc.)
+* location - string (room, shelf, directory, etc.)
+* tags - array of string (genre, etc.)
+* desc - string (summary or description)
 
 > A list of routes (e.g. `POST /pins/ allows users to post a picture of a pin`)<br />
+GET     / display landing page
+
+GET     /user/signup allow user to create an account
+POST    /user/signup allow user to create an account
+GET     /user/signin display form for user to sign in
+POST    /user/signin sign user into the app
+GET     /user/signout allow user to sign out of app
+
+GET     INDEX   /media/         index of media entries filtered by media type selected from dropdown
+GET     NEW     /media/new      diplay form to add new media to library
+GET     SHOW    /media/:id      display info of one media document
+GET     EDIT    /media/:id/edit display form prepopulated with data to edit a document
+POST    CREATE  /media/         create a new document in the media collection
+DELETE  DESTROY /media/:id      delete document with _id: id from collection
+PUT     UPDATE  /media/:id      update document with new values from the edit form
 
 ## Wireframes
 ![landing](./wireframes/landing.png)
