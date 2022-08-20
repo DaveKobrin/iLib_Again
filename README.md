@@ -11,7 +11,7 @@ Track media assets owned and location of said assets
 
 User
 * username - string, unique, required
-* password - string, reqired
+* password - string, required
 * type - string (normal(default), or admin(for stretch goals)) required(default - normal)
 
 Media
@@ -35,7 +35,7 @@ POST    /user/signin sign user into the app
 GET     /user/signout allow user to sign out of app
 
 GET     INDEX   /media/         index of media entries filtered by media type selected from dropdown
-GET     NEW     /media/new      diplay form to add new media to library
+GET     NEW     /media/new      display form to add new media to library
 GET     SHOW    /media/:id      display info of one media document
 GET     EDIT    /media/:id/edit display form prepopulated with data to edit a document
 POST    CREATE  /media/         create a new document in the media collection
