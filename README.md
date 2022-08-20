@@ -4,9 +4,11 @@ A MongoDB / Node.js / Express.js Library management web app.
 ## Project Description
 > Include:<br />
 > General App Idea/Purpose<br />
+
 Track media assets owned and location of said assets
 
 > Models including field names and their datatypes<br />
+
 User
 * username - string, unique, required
 * password - string, reqired
@@ -46,21 +48,21 @@ PUT     UPDATE  /media/:id      update document with new values from the edit fo
 ![books_new_show_edit](./wireframes/books_new_show_edit.png)
 
 ## User Stories
-> User stories detailing app functionality<br />
-> As a Normal User I want to be able to create a user account.
-> As a Normal User I want to be able to edit my account / change password.
-> As a Normal User I want to be able to browse the titles currently entered into my library database.
-> As a Normal User I want to be able to add titles into my library database.
-> As a Normal User I want to be able to edit the titles currently entered in my library database.
-> As a Normal User I want to be able to delete titles from my database.
+* User stories detailing app functionality<br />
+* As a Normal User I want to be able to create a user account.
+* As a Normal User I want to be able to edit my account / change password.
+* As a Normal User I want to be able to browse the titles currently entered into my library database.
+* As a Normal User I want to be able to add titles into my library database.
+* As a Normal User I want to be able to edit the titles currently entered in my library database.
+* As a Normal User I want to be able to delete titles from my database.
 
-> As an Admin User I want to be able to browse the titles currently entered into the database for all users.
-> As an Admin User I want to be unable to add titles into the database.
-> As an Admin User I want to be able to edit and delete titles currently entered into the database for all users.
+* As an Admin User I want to be able to browse the titles currently entered into the database for all users.
+* As an Admin User I want to be unable to add titles into the database.
+* As an Admin User I want to be able to edit and delete titles currently entered into the database for all users.
 
 ### MVP Goals
-All Normal User type User Stories
+* All Normal User type User Stories
 
 ### Stretch Goals
-All Admin user type stories
-look up title info from an online api based on the upc code entered or scanned into the page.
+* All Admin user type stories
+* look up title info from an online api based on the upc code entered or scanned into the page.
