@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="books_index.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5946522"
+     inkscape:cx="404.43809"
+     inkscape:cy="494.40665"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2936">
+      <stop
+         style="stop-color:#9afff0;stop-opacity:1;"
+         offset="0"
+         id="stop2932" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop2934" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2925">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop2921" />
+      <stop
+         style="stop-color:#9dffef;stop-opacity:1;"
+         offset="1"
+         id="stop2923" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2925"
+       id="linearGradient2927"
+       x1="0.88987589"
+       y1="59.621681"
+       x2="209.12083"
+       y2="59.621681"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0064103,0,0,0.80851063,-0.45064231,-31.297125)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2936"
+       id="linearGradient2938"
+       x1="0.44493794"
+       y1="165.29446"
+       x2="210.01072"
+       y2="165.29446"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.69373944,0,10.356287)" />
+  </defs>
+  <g
+     inkscape:label="base"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient2927);fill-opacity:1;stroke-width:0.509657"
+       id="rect1180"
+       width="209.56577"
+       height="33.815281"
+       x="0.44493794"
+       y="-3.4365787e-06" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="3.1145658"
+       y="12.458262"
+       id="text186"><tspan
+         sodipodi:role="line"
+         id="tspan184"
+         x="3.1145658"
+         y="12.458262"
+         style="stroke-width:0.264583">iLib - Again</tspan></text>
+    <rect
+       style="fill:#e2fffb;fill-opacity:0.97446799;stroke-width:0.564999"
+       id="rect398"
+       width="55.172306"
+       height="8.4538212"
+       x="4.0044417"
+       y="17.352581" />
+    <rect
+       style="fill:#9c9c9c;fill-opacity:1;stroke-width:0.564999"
+       id="rect1007"
+       width="8.4538212"
+       height="8.0088835"
+       x="51.167862"
+       y="17.797516" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 53.392554,20.467146 3.114566,3.559503 1.334812,-3.559503 z"
+       id="path1072" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.7841911"
+       y="24.026649"
+       id="text1076"><tspan
+         sodipodi:role="line"
+         id="tspan1074"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="5.7841911"
+         y="24.026649">Books</tspan></text>
+    <rect
+       style="fill:url(#linearGradient2938);fill-opacity:1;stroke-width:0.470593"
+       id="rect2930"
+       width="209.56578"
+       height="182.42458"
+       x="0.44493794"
+       y="33.815285" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="content">
+    <g
+       id="g5867">
+      <rect
+         style="fill:#ababab;fill-opacity:0.889855;stroke-width:0.564999"
+         id="rect2982"
+         width="36.484913"
+         height="45.383671"
+         x="16.354679"
+         y="51.059841" />
+      <rect
+         style="fill:#e1fffa;fill-opacity:0.97446799;stroke-width:0.564999"
+         id="rect3662"
+         width="36.484913"
+         height="45.383671"
+         x="14.238014"
+         y="48.943172" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="21.333231"
+         y="59.597893"
+         id="text5850"><tspan
+           sodipodi:role="line"
+           id="tspan5852"
+           x="21.333231"
+           y="59.597893">Night</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5854"
+           x="21.333231"
+           y="69.299278">of the</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5856"
+           x="21.333231"
+           y="79.000664">Living</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5858"
+           x="21.333231"
+           y="88.702057">Dead</tspan></text>
+    </g>
+    <g
+       id="g5883"
+       transform="translate(46.037521)">
+      <rect
+         style="fill:#ababab;fill-opacity:0.889855;stroke-width:0.564999"
+         id="rect5869"
+         width="36.484913"
+         height="45.383671"
+         x="16.354679"
+         y="51.059841" />
+      <rect
+         style="fill:#e1fffa;fill-opacity:0.974468;stroke-width:0.564999"
+         id="rect5871"
+         width="36.484913"
+         height="45.383671"
+         x="14.238014"
+         y="48.943172" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="21.333231"
+         y="59.597893"
+         id="text5881"><tspan
+           sodipodi:role="line"
+           id="tspan5885">Shawn</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5887">of the</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5889">Dead</tspan></text>
+    </g>
+    <g
+       id="g5905"
+       transform="translate(95.77922)">
+      <rect
+         style="fill:#ababab;fill-opacity:0.889855;stroke-width:0.564999"
+         id="rect5891"
+         width="36.484913"
+         height="45.383671"
+         x="16.354679"
+         y="51.059841" />
+      <rect
+         style="fill:#e1fffa;fill-opacity:0.974468;stroke-width:0.564999"
+         id="rect5893"
+         width="36.484913"
+         height="45.383671"
+         x="14.238014"
+         y="48.943172" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="21.333231"
+         y="59.597893"
+         id="text5903"><tspan
+           sodipodi:role="line"
+           id="tspan5907">World</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5909">War</tspan><tspan
+           sodipodi:role="line"
+           id="tspan5911">Z</tspan></text>
+    </g>
+  </g>
+</svg>

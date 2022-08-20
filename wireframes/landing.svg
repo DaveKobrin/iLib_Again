@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="landing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.5946522"
+     inkscape:cx="451.52444"
+     inkscape:cy="494.40665"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2936">
+      <stop
+         style="stop-color:#9afff0;stop-opacity:1;"
+         offset="0"
+         id="stop2932" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop2934" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2925">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop2921" />
+      <stop
+         style="stop-color:#9dffef;stop-opacity:1;"
+         offset="1"
+         id="stop2923" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2925"
+       id="linearGradient2927"
+       x1="0.88987589"
+       y1="59.621681"
+       x2="209.12083"
+       y2="59.621681"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0064103,0,0,0.80851063,-0.45064231,-31.297125)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2936"
+       id="linearGradient2938"
+       x1="0.44493794"
+       y1="165.29446"
+       x2="210.01072"
+       y2="165.29446"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.32487313,0,22.829607)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient2927);fill-opacity:1;stroke-width:0.509657"
+       id="rect1180"
+       width="209.56577"
+       height="33.815281"
+       x="0.44493794"
+       y="-3.4365787e-06" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="3.1145658"
+       y="12.458262"
+       id="text186"><tspan
+         sodipodi:role="line"
+         id="tspan184"
+         x="3.1145658"
+         y="12.458262"
+         style="stroke-width:0.264583">iLib - Again</tspan></text>
+    <rect
+       style="fill:#e2fffb;fill-opacity:0.97446799;stroke-width:0.564999"
+       id="rect398"
+       width="55.172306"
+       height="8.4538212"
+       x="4.0044417"
+       y="17.352581" />
+    <rect
+       style="fill:#9c9c9c;fill-opacity:1;stroke-width:0.564999"
+       id="rect1007"
+       width="8.4538212"
+       height="8.0088835"
+       x="51.167862"
+       y="17.797516" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 53.392554,20.467146 3.114566,3.559503 1.334812,-3.559503 z"
+       id="path1072" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.7841911"
+       y="24.026649"
+       id="text1076"><tspan
+         sodipodi:role="line"
+         id="tspan1074"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="5.7841911"
+         y="24.026649">Books</tspan></text>
+    <rect
+       style="fill:url(#linearGradient2938);fill-opacity:1;stroke-width:0.322036"
+       id="rect2930"
+       width="209.56578"
+       height="85.428101"
+       x="0.44493794"
+       y="33.815285" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="20.467146"
+       y="71.190071"
+       id="text2942"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="20.467146"
+         y="71.190071"
+         id="tspan2944">Welcome to iLib - Again!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="20.022207"
+       y="81.423645"
+       id="text2950"><tspan
+         sodipodi:role="line"
+         id="tspan2952">The full library management software.</tspan><tspan
+         sodipodi:role="line"
+         id="tspan2954"> Select a media type to continue</tspan></text>
+  </g>
+</svg>
