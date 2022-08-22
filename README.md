@@ -20,6 +20,7 @@ Media
 * creator_name - string
 * creator_type - string (artist, director, author, etc.)
 * cover - string (link to image)
+* cover_alt - string
 * format - string (book, mag, cd , mp3, dvd, etc.)
 * location - string (room, shelf, directory, etc.)
 * tags - array of string (genre, etc.)

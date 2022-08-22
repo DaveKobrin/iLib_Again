@@ -1,0 +1,7 @@
+<%- include ('partials/head.ejs') %> 
+<h1>Captain's Log : Star Date <%= entry.createdAt %></h1>
+
+<h2><%= entry.title %></h2>
+<p><%= entry.entry %></p>
+<p>The ship is <%=entry.shipIsBroken?'':'not '%>broken</p>
+<%- include ('partials/foot.ejs') %> 
