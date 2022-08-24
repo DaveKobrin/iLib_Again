@@ -1,14 +1,14 @@
-<%- include ('partials/head.ejs') %> 
-<h1>Captain's Log</h1>
+<%- include ('../partials/head.ejs') %> 
+<h1>Media</h1>
 <ul>
     <% for(const i in entries) {%> 
     <li>
-        <a href="/logs/<%= entries[i].id %>"><%= entries[i].title %></a>
-        <a href="/logs/<%= entries[i].id %>/edit">Edit</a>
-        <form action="/logs/<%= entries[i].id %>?_method=DELETE" method="POST">
+        <a href="/media/<%= entries[i].id %>"><%= entries[i].title %></a>
+        <a href="/media/<%= entries[i].id %>/edit">Edit</a>
+        <form action="/media/<%= entries[i].id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete"/>
         </form>
     </li>
     <% } %> 
 </ul>
-<%- include ('partials/foot.ejs') %> 
+<%- include ('../partials/foot.ejs') %> 

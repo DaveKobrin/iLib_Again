@@ -1,7 +1,41 @@
-<%- include ('partials/head.ejs') %> 
-<h1>Captain's Log : Star Date <%= entry.createdAt %></h1>
-
-<h2><%= entry.title %></h2>
-<p><%= entry.entry %></p>
-<p>The ship is <%=entry.shipIsBroken?'':'not '%>broken</p>
-<%- include ('partials/foot.ejs') %> 
+<%- include ('../partials/head.ejs') %> 
+<h1><%= entry.title %></h1>
+<table>
+    <tr>
+        <td>UPC</td>
+        <td><%= entry.upc %></td>
+    </tr>
+    <tr>
+        <td>Title</td>
+        <td><%= entry.title %></td>
+    </tr>
+    <tr>
+        <td>Creator Name</td>
+        <td><%= entry.creator_name %></td>
+    </tr>
+    <tr>
+        <td>Creator Type</td>
+        <td><%= entry.creator_type %></td>
+    </tr>
+    <tr>
+        <td>Cover Image</td>
+        <td><img src="<%= entry.cover_img %>" alt="<%= entry.cover_alt %>"></td>
+    </tr>
+    <tr>
+        <td>Format</td>
+        <td><%= entry.format %></td>
+    </tr>
+    <tr>    
+        <td>location</td>
+        <td><%= entry.location %></td>
+    </tr>
+    <tr>    
+        <td>Tags</td>
+        <td><%= entry.tags %></td>
+    </tr>
+    <tr>    
+        <td>Description</td>
+        <td><%= entry.desc %></td>
+    </tr>
+</table>
+<%- include ('../partials/foot.ejs') %> 

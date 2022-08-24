@@ -25,7 +25,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
-app.use(express.static('public'));
+app.use(express.static('./public'));
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/images', express.static(__dirname + '/images'));
+app.use('/js', express.static(__dirname + '/js'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
