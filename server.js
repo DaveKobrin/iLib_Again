@@ -35,4 +35,4 @@ app.use(methodOverride('_method'));
 // ROUTES 
 app.use('/media', mediaController);
 app.use('/user', userController);
-app.get('/', (req,res)=>{ res.send('landing page route') });
+app.get('/', (req,res)=>{ res.render('landing.ejs') });

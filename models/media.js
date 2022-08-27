@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const mediaSchema = new mongoose.Schema({
+    user: {type: String, reuired: true},
     upc: {type: String}, //required: true, unique: true},
     title: { type: String, required: true },
     creator_name: String,

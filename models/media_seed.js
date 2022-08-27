@@ -26,7 +26,9 @@ const mediaSeed = [
     "format": "Nintendo Switch Game Card",
     "location": "MBR",
     "tags": [
-      "switch game es5 "
+      "switch",
+      "game",
+      "es5"
     ],
     "desc": "The Elder Scrolls V: Skyrim (Switch) The legendary open-world adventure where you can be anyone and do anything  now allows you to play anywhere - at home on your TV or on the go The Elder Scrolls V: Skyrim for Nintendo Switch includes all-new exclusive features like motion control for combat and lockpicking  outfits and gear from The Legend of Zelda franchise  and amiibo (sold separately) compatibility.",
   },
@@ -40,7 +42,8 @@ const mediaSeed = [
     "format": "DVD",
     "location": "MBR",
     "tags": [
-      "holiday movie "
+      "holiday",
+      "movie "
     ],
     "desc": "",
   },
@@ -54,7 +57,9 @@ const mediaSeed = [
     "format": "CD",
     "location": "MBR",
     "tags": [
-      "Japanese death-metal music"
+      "Japanese",
+      "death-metal",
+      "music"
     ],
     "desc": "",
   },
@@ -68,13 +73,15 @@ const mediaSeed = [
     "format": "Blu-Ray",
     "location": "MBR",
     "tags": [
-      "movie fantasy adventure"
+      "movie",
+      "fantasy",
+      "adventure"
     ],
     "desc": "The Hobbit: The Motion Picture Trilogy by Turner in Blu-ray (Extended Edition)",
   }
 ]
 
 
-
+module.exports = mediaSeed;
 
 

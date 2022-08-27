@@ -18,8 +18,7 @@ router.post('/register', (req,res)=>{
             User.create(req.body, (err,data)=>{
                 if(err) res.send(err.message);
                 else {
-                    console.log(data)
-                    res.redirect('/');
+                    res.redirect('/user/signin');
                 }
             })
         }
