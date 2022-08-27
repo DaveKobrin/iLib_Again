@@ -1,0 +1,23 @@
+<div id="dataProxy" <% if(entries) { %>
+    data-entries="<%= JSON.stringify(entries) %>" 
+    <% } %>>
+</div> 
+<table class="nav-item"><tr><!-- combobox - base code from Ladislav Zima via stack overflow -->
+    <th>Media Type</th>
+    <td>
+        <select id="media-type"
+        onchange="var textbox = document.getElementById('inp-media-type'); textbox.value = (this.selectedIndex == -1 ? '' : this.options[this.selectedIndex].value); textbox.select(); textbox.dispatchEvent(new Event('change'));"
+        onclick="this.selectedIndex = -1;">
+        <option value="All">All</option>
+        <% let opt=''; %>
+        <% if(mediaList) { %>
+            <% for ( const el of mediaList ) { %>
+                <option value="<%= el %>"><%= el %></option>
+                <% }} %>  
+            </select>
+            
+            <input name="inp-media-type" id="inp-media-type" value="" autocomplete="off" onkeypress="if (event.keyCode == 13) return false;" />
+        </td>
+    </tr></table>
+    <script src="/js/mediaHeader.js"></script>
+    

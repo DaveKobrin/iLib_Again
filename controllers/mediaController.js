@@ -37,9 +37,15 @@ router.get('/seed', (req,res)=>{
 router.get('/', (req,res)=>{
     Media.find({}, (err, entries)=>{
         if (err)
-            res.send(err);
-        else
-        res.render('media/index.ejs', { entries });
+        res.send(err);
+        else {
+        let mediaList = [];
+        for (const entry of entries) {
+            mediaList.push(entry.format);
+        }
+        mediaList = [...new Set(mediaList)]
+        res.render('media/index.ejs', { entries, mediaList });
+        }
     });
     })
 

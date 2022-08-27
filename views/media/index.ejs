@@ -1,14 +1,27 @@
 <%- include ('../partials/head.ejs') %> 
-<h1>Media</h1>
-<ul>
-    <% for(const i in entries) {%> 
-    <li>
-        <a href="/media/<%= entries[i].id %>"><%= entries[i].title %></a>
-        <a href="/media/<%= entries[i].id %>/edit">Edit</a>
-        <form action="/media/<%= entries[i].id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete"/>
-        </form>
-    </li>
-    <% } %> 
-</ul>
+<%- include ('header.ejs')  %> 
+<%- include ('../partials/nav.ejs') %>
+<section>
+    <h2 id="mediaTypeHeading">Media</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% for(const i in entries) {%>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<%= entries[i].cover_img %>" alt="<%= entries[i].cover_alt %>">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a href="/media/<%= entries[i].id %>"><%= entries[i].title %></a>
+                        </h3>
+                    </div>
+                    <div class="card-footer">
+                        <a class="card-link" href="/media/<%= entries[i].id %>/edit">Edit</a>
+                        <form action="/media/<%= entries[i].id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %> 
+    </div>
+</section>
 <%- include ('../partials/foot.ejs') %> 

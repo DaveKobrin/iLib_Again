@@ -1,3 +1,23 @@
 body{
-    background-color: rgb(184, 231, 215);
+    background-image: linear-gradient( to right, #9afff0, #ffffff );
+}
+
+header {
+    background-image: linear-gradient( to left, #9afff0, #ffffff );
+}
+
+select#media-type
+{
+    clip: rect(auto auto auto 301px);
+    width: 321px;
+    height: 1.5rem;
+    z-index: 101; 
+    position: absolute;
+}
+
+input#inp-media-type
+{
+    width: 300px;
+    height: 1.5rem;
+    margin-right: 40px;
 }
