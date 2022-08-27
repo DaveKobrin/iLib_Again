@@ -1,12 +1,12 @@
 <%- include ('../partials/head.ejs') %> 
 <%- include ('header.ejs')  %> 
 <%- include ('../partials/nav.ejs') %>
-<section>
-    <h2 id="mediaTypeHeading">Media</h2>
+<h2 id="mediaTypeHeading">Media</h2>
+<section class="main-section">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <% for(const i in entries) {%>
             <div class="col">
-                <div class="card">
+                <div class="card" style="max-width: 18em;">
                     <img class="card-img-top" src="<%= entries[i].cover_img %>" alt="<%= entries[i].cover_alt %>">
                     <div class="card-body">
                         <h3 class="card-title">

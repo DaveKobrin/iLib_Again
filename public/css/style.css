@@ -6,6 +6,12 @@ header {
     background-image: linear-gradient( to left, #9afff0, #ffffff );
 }
 
+.main-section {
+    display: flex;
+    justify-content: center;
+    padding-left: 2em;
+}
+
 select#media-type
 {
     clip: rect(auto auto auto 301px);
