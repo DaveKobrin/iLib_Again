@@ -4,6 +4,37 @@ body{
 
 header {
     background-image: linear-gradient( to left, #9afff0, #ffffff );
+    padding: 1.5rem;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+
+.float-top {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.float-middle {
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.float-bottom {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.select-group input.form-control {
+    width: 65%;
+}
+
+.select-group select.form-control {
+    width: 35%;
 }
 
 .main-section {
@@ -12,18 +43,10 @@ header {
     padding-left: 2em;
 }
 
-select#media-type
-{
-    clip: rect(auto auto auto 301px);
-    width: 321px;
-    height: 1.5rem;
-    z-index: 101; 
-    position: absolute;
+.bg-ilib-primary {
+    background-color: #068d9d;
 }
 
-input#inp-media-type
-{
-    width: 300px;
-    height: 1.5rem;
-    margin-right: 40px;
+.text-ilib-primary {
+    color: honeydew;
 }

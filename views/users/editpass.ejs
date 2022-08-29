@@ -3,14 +3,18 @@
 <div class="container-fluid text-center">
     <br>
     <h1>Register a new user</h1>
-    <form class="form-signin w-100 m-auto" action="/user/register" method="POST">
+    <form class="form-signin w-100 m-auto" action="/user/edit" method="POST">
         <div class="form-floating">
             <input class="form-control float-top" type="text" name="username" id="username"/>
             <label for="username">User Name</label>
         </div>
         <div class="form-floating">
-            <input class="form-control float-bottom" type="password" name="password" id="password"/>
-            <label for="password">Password</label>
+            <input class="form-control float-middle" type="password" name="old_password" id="old_password"/>
+            <label for="old_password">Old Password</label>
+        </div>
+        <div class="form-floating">
+            <input class="form-control float-bottom" type="password" name="new_password" id="new_password"/>
+            <label for="new_password">New Password</label>
         </div>
         <input class="w-100 btn btn-lg bg-ilib-primary text-ilib-primary" type="submit" value="Sign Up">
     </form>

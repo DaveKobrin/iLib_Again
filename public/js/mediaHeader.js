@@ -4,7 +4,7 @@ const getEntries = () => {
     return entries?entries:undefined;
 }
 
-const inpMediaType = document.querySelector('#inp-media-type');
+const inpMediaType = document.querySelector('#format');
 inpMediaType.addEventListener('change', (e) => { 
     // console.log(e.target.value); 
     console.log(getEntries());
