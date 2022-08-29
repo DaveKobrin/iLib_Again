@@ -1,14 +1,26 @@
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/media">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/media/new">New Entry</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/user/register">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/user/signin">Sign in</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/user/signout">Sign out</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/media">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/media/new">New Entry</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sign in|out
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/user/signin">Sign in</a></li>
+                        <li><a class="dropdown-item" href="/user/edit">Change Password</a></li>
+                        <li><a class="dropdown-item" href="/user/signout">Sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </nav>
-</header>
+    </div>
+</nav>
+
 
