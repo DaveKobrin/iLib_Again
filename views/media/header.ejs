@@ -2,14 +2,52 @@
     data-entries="<%= JSON.stringify(entries) %>" 
     <% } %>>
 </div> 
-<label class="form-label" for="format">Format </label>
-<select class="form-control w-25" name="format" id="format">
-    <option value="All">All</option>
-    <% let opt=''; %>
-    <% if(dropdownData) { %>
-        <% for ( const el of dropdownData.format ) { %>
-            <option value="<%= el %>"><%= el %></option>
-    <% }} %>  
-</select>
+<div class="container-fluid justify-content-center row row-cols-md-5">
+    <div class="col">
+        <label class="form-label" for="format">Format </label>
+        <select class="form-control" name="format" id="format">
+            <option value="All" selected>All</option>
+            <% let opt=''; %>
+            <% if(dropdownData) { %>
+                <% for ( const el of dropdownData.format ) { %>
+                    <option value="<%= el %>"><%= el %></option>
+            <% }} %>  
+        </select>
+    </div>
+    <div class="col">
+        <label class="form-label" for="creator_name">Creator Name</label>
+        <select class="form-control" name="creator_name" id="creator_name">
+            <option value="All" selected>All</option>
+            <% opt=''; %>
+            <% if(dropdownData) { %>
+                <% for ( const el of dropdownData.creatorName ) { %>
+                    <option value="<%= el %>"><%= el %></option>
+            <% }} %>  
+        </select>
+    </div>
+    <div class="col">
+        <label class="form-label" for="location">Location</label>
+        <select class="form-control" name="location" id="location">
+            <option value="All" selected>All</option>
+            <% opt=''; %>
+            <% if(dropdownData) { %>
+                <% for ( const el of dropdownData.location ) { %>
+                    <option value="<%= el %>"><%= el %></option>
+            <% }} %>  
+        </select>
+    </div>
+    <div class="col">
+        <label class="form-label" for="tags">Tags</label>
+        <select class="form-control" name="tags" id="tags">
+            <option value="All" selected>All</option>
+            <% opt=''; %>
+            <% if(dropdownData) { %>
+                <% for ( const el of dropdownData.tags ) { %>
+                    <option value="<%= el %>"><%= el %></option>
+            <% }} %>  
+        </select>
+    </div>
+    <input type="button" class="btn w-25 m-3 form-control bg-ilib-primary text-ilib-primary" id="filter" value="Filter"/>
+</div>
 <script src="/js/mediaHeader.js"></script>
     

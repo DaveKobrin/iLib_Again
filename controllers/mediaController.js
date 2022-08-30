@@ -10,12 +10,14 @@ const getDropdownData = (req,res,next) => {
         else {
             const dropdownData = {
                 format: [],
+                creatorName: [],
                 creatorType: [],
                 location: [],
                 tags: []
             }
             for (const entry of entries) {
                 dropdownData.format.push(entry.format);
+                dropdownData.creatorName.push(entry.creator_name);
                 dropdownData.creatorType.push(entry.creator_type);
                 dropdownData.location.push(entry.location);
                 for(const tag of entry.tags) {
