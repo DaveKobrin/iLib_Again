@@ -10,12 +10,11 @@ router.get('/register', (req,res)=>{res.render('users/register.ejs')});
 router.post('/register', (req,res)=>{
     const salt = bcrypt.genSaltSync(10);
     req.body.password = bcrypt.hashSync(req.body.password, salt);
-    // console.log(req.body);
     User.findOne({username: req.body.username}, (err, userExists)=>{
         if(userExists) {
             res.send('username is taken')
         } else {
-            User.create(req.body, {new: true}, (err,data)=>{
+            User.create(req.body, (err,data)=>{
                 if(err) res.send(err.message);
                 else {
                     req.session.currentUser = data;
