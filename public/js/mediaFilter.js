@@ -12,11 +12,11 @@ format.addEventListener('click', (e) => {
     filter.location = document.querySelector('#location').value;
     filter.tags = document.querySelector('#tags').value;
     
-    console.log({filter}); 
+    // console.log({filter}); 
     // console.log(e.target.value);
 
     const entries = getEntries();
-    console.log(entries);
+    // console.log(entries);
     const mainSection = document.querySelector('#mainSection')
     const container = document.createElement('div');
     container.classList = 'row row-cols-1 row-cols-md-3 g-4';
@@ -50,5 +50,5 @@ format.addEventListener('click', (e) => {
     container.innerHTML = html;
     mainSection.innerHTML = '';
     mainSection.appendChild(container); 
-    console.log({html});
+    // console.log({html});
 });
