@@ -18,7 +18,7 @@ router.post('/register', (req,res)=>{
                 if(err) res.send(err.message);
                 else {
                     req.session.currentUser = data;
-                    res.redirect('/');
+                    res.redirect('/media');
                     // res.redirect('/user/signin');
                 }
             })
@@ -35,7 +35,7 @@ router.post('/signin', (req,res)=>{
             const validLogin = bcrypt.compareSync(req.body.password, user.password);
             if (validLogin) {
                 req.session.currentUser = user;
-                res.redirect('/');
+                res.redirect('/media');
             } else {
                 res.send('credentials do not match');
             }

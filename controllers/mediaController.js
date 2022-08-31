@@ -3,7 +3,9 @@ const router = express.Router();
 const Media = require('../models/media.js');
 
 const getDropdownData = (req,res,next) => {
-    const filter = {user: req.session.currentUser.username};
+    const filter = {}; //filter to return all items if currentUser is admin
+    if (!req.session.currentUser.admin) //otherwise only return currentUser's documents
+        filter.user = req.session.currentUser.username;
     Media.find(filter, (err, entries)=>{
         if(err)
             res.send(err);
@@ -46,17 +48,23 @@ const authRequired = (req, res, next) => {
 
 // SEED
 router.get('/seed', authRequired, (req,res)=>{
-    const data = require('../models/media_seed.js');
-    for(const el of data){
-        el.user = req.session.currentUser.username
+    if (!req.session.currentUser.admin) {
+        const data = require('../models/media_seed.js');
+        for(const el of data){
+            el.user = req.session.currentUser.username
+        }
+        Media.create(data);
+        res.redirect('/media');
+    } else {
+        res.send('admin users cannot create new entries');
     }
-    Media.create(data);
-    res.redirect('/media');
 });
 
 // INDEX
 router.get('/',authRequired, getDropdownData, (req,res)=>{
-    const filter = {user: req.session.currentUser.username};
+    const filter = {}; //filter to return all items if currentUser is admin
+    if (!req.session.currentUser.admin) //otherwise only return currentUser's documents
+        filter.user = req.session.currentUser.username;
     Media.find(filter, (err, entries)=>{
         if (err) res.send(err);
         else res.render('media/index.ejs', { entries, dropdownData:req.body.dropdownData });
@@ -64,7 +72,12 @@ router.get('/',authRequired, getDropdownData, (req,res)=>{
 });
 
 // NEW
-router.get('/new', authRequired, getDropdownData, (req,res)=>{res.render('media/new.ejs', { dropdownData:req.body.dropdownData })});
+router.get('/new', authRequired, getDropdownData, (req,res)=>{
+    if (!req.session.currentUser.admin)
+        res.render('media/new.ejs', { dropdownData:req.body.dropdownData });
+    else
+        res.send('admin users cannot create new entries');
+});
 
 // SHOW
 router.get('/:id', authRequired, (req,res)=>{
@@ -76,18 +89,25 @@ router.get('/:id', authRequired, (req,res)=>{
 
 // EDIT
 router.get('/:id/edit', authRequired, getDropdownData, (req,res)=>{
+    const userInfo = {userIsAdmin: req.session.currentUser.admin}
     Media.findById(req.params.id, (err, entry)=>{
         if(err) res.send(err);
-        else res.render('media/edit.ejs',{ entry, dropdownData:req.body.dropdownData });
+        else {
+            userInfo.user = entry.user
+            res.render('media/edit.ejs',{ entry, dropdownData:req.body.dropdownData, userInfo });
+        }
     })
 });
 
 // CREATE
 router.post('/', authRequired, (req,res)=>{
-    req.body.user = req.session.currentUser.username;
-    req.body.tags = (typeof(req.body.tags)===Array?req.body.tags.join(', '):req.body.tags).split(', ');
-    Media.create(req.body); 
-    res.redirect('/media')
+    if (!req.session.currentUser.admin) {
+        req.body.user = req.session.currentUser.username;
+        req.body.tags = (typeof(req.body.tags)===Array?req.body.tags.join(', '):req.body.tags).split(', ');
+        Media.create(req.body); 
+        res.redirect('/media')
+    } else
+        res.send('admin users cannot create new entries');
 });
 
 // DELETE
@@ -100,11 +120,23 @@ router.delete('/:id', authRequired, (req,res)=>{
 
 // PUT
 router.put('/:id', authRequired, (req,res)=>{
-    req.body.user = req.session.currentUser.username;
     req.body.tags = (typeof(req.body.tags)===Array?req.body.tags.join(', '):req.body.tags).split(', ');
-    Media.findByIdAndUpdate(req.params.id, req.body, (err, entry)=>{
+    Media.findById(req.params.id, (err, entry)=>{
         if(err) res.send(err);
-        else res.redirect('back');
+        else {
+            entry.upc          = req.body.upc; 
+            entry.title        = req.body.title; 
+            entry.creator_name = req.body.creator_name;         
+            entry.creator_type = req.body.creator_type;         
+            entry.cover_img    = req.body.cover_img;     
+            entry.cover_alt    = req.body.cover_alt;     
+            entry.format       = req.body.format;     
+            entry.location     = req.body.location;     
+            entry.tags         = req.body.tags; 
+            entry.desc         = req.body.desc; 
+            entry.save();
+            res.redirect('back');
+        }
     })
 });
 

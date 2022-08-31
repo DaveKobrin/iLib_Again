@@ -12,7 +12,7 @@ Track media assets owned and location of said assets
 User
 * username - string, unique, required
 * password - string, required
-* type - string (normal(default), or admin(for stretch goals)) required(default - normal)
+* admin - boolean (false(normal user), or true(admin user access)) required(default - false)
 
 Media
 * upc - string, unique
@@ -29,8 +29,10 @@ Media
 > A list of routes (e.g. `POST /pins/ allows users to post a picture of a pin`)<br />
 GET     / display landing page
 
-GET     /user/signup allow user to create an account
-POST    /user/signup allow user to create an account
+GET     /user/register allow user to create an account
+POST    /user/register allow user to create an account
+GET     /user/edit allow user to change the password
+POST    /user/edit allow user to change the password
 GET     /user/signin display form for user to sign in
 POST    /user/signin sign user into the app
 GET     /user/signout allow user to sign out of app
