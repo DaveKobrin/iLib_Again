@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Media = require('../models/media.js');
+const request = require('request');
 
 const getDropdownData = (req,res,next) => {
     const filter = {}; //filter to return all items if currentUser is admin
@@ -97,6 +98,34 @@ router.get('/:id/edit', authRequired, getDropdownData, (req,res)=>{
             res.render('media/edit.ejs',{ entry, dropdownData:req.body.dropdownData, userInfo });
         }
     })
+});
+
+// EDIT with API Data
+router.get('/:id/edit/:upc', authRequired, getDropdownData, async (req,res)=>{
+    console.log({upc: req.params.upc});
+    const userInfo = {userIsAdmin: req.session.currentUser.admin}
+    let data = request.post({
+        uri: 'https://api.upcitemdb.com/prod/trial/lookup',
+        headers: { "Content-Type": "application/json" },
+        gzip: true,
+        body: `{ "upc": "${req.params.upc}" }`,
+    }, (err, resp, body) => {
+        if (err) {
+            // console.log({err});
+            res.send(err);
+        }
+        else{
+            // console.log({resp});
+            // console.log({body});
+            Media.findById(req.params.id, (err, entry)=>{
+                if(err) res.send(err);
+                else {
+                    userInfo.user = entry.user
+                    res.render('media/editlookup.ejs',{ entry, dropdownData:req.body.dropdownData, userInfo, lookup: JSON.parse(body)});
+                }
+            })
+        }
+    });
 });
 
 // CREATE

@@ -11,18 +11,18 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <label class="form-label" for="upc">UPC</label>
-                        <input id="inpUpc" class="form-control" type="text" name="upc" id="upc" value="<%= entry.upc %>"/>
+                        <input id="inpUpc" class="form-control" type="text" name="upc" id="upc" value="<%= lookup.upc %>"/>
                         <input id="btnLookup" class="form-control btn bg-ilib-primary text-ilib-primary" type="submit" value="lookup" formaction="/media/<%= entry.id %>/edit" formmethod="get"/>
                     </div>
                     <div class="col-sm-6">
                         <label class="form-label" for="title">Title</label>
-                        <input class="form-control" type="text" name="title" id="title" value="<%= entry.title %>"/>
+                        <input class="form-control" type="text" name="title" id="title" value="<%= lookup.title %>"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <label class="form-label" for="creator_name">Creator Name</label>
-                        <input class="form-control" type="text" name="creator_name" id="creator_name" value="<%= entry.creator_name %>"/>
+                        <input class="form-control" type="text" name="creator_name" id="creator_name" value="<%=lookup.publisher? %>"/>
                     </div>
                     <div class="col-sm-6">
                         <label class="form-label" for="creator_type">Creator Type</label>
