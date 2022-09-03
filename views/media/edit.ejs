@@ -8,50 +8,65 @@
         <div class="">
             <form action="/media/<%= entry.id %>?_method=PUT" method="POST">
              
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col-sm-6">
-                        <label class="form-label" for="upc">UPC</label>
-                        <input id="inpUpc" class="form-control" type="text" name="upc" id="upc" value="<%= entry.upc %>"/>
-                        <input id="btnLookup" class="form-control btn bg-ilib-primary text-ilib-primary" type="submit" value="lookup" formaction="/media/<%= entry.id %>/edit" formmethod="get"/>
-                    </div>
-                    <div class="col-sm-6">
-                        <label class="form-label" for="title">Title</label>
-                        <input class="form-control" type="text" name="title" id="title" value="<%= entry.title %>"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label class="form-label" for="creator_name">Creator Name</label>
-                        <input class="form-control" type="text" name="creator_name" id="creator_name" value="<%= entry.creator_name %>"/>
-                    </div>
-                    <div class="col-sm-6">
-                        <label class="form-label" for="creator_type">Creator Type</label>
-                        <div class="input-group select-group">
-                            <input class="form-control" name="creator_type" id="creator_type" value="<%= entry.creator_type %>" autocomplete="off" onkeypress="if (event.keyCode == 13) return false;" />
-                            <select id="sel-creator-type" class="form-control input-group-addon btn bg-ilib-primary text-ilib-primary"
-                            onchange="var textbox = document.getElementById('creator_type'); textbox.value = (this.selectedIndex == -1 ? '' : this.options[this.selectedIndex].value); textbox.select(); textbox.dispatchEvent(new Event('change'));"
-                            onclick="this.selectedIndex = -1;">
-                            <% let opt=''; %>
-                            <% if(dropdownData) { %>
-                                <% for ( const el of dropdownData.creatorType ) { %>
-                                    <option value="<%= el %>"><%= el %></option>
-                                    <% }} %>  
-                                </select>
-                            </div>    
+                        <div class="input-group">
+                            <label class="input-group-text" for="upc">UPC</label>
+                            <input id="inpUpc" class="form-control" type="text" name="upc" id="upc" value="<%= entry.upc %>"/>
+                            <input id="btnLookup" class="btn bg-ilib-primary text-ilib-primary" type="submit" value="lookup" formaction="/media/<%= entry.id %>/edit" formmethod="get"/>
                         </div>
                     </div>
-           
-                <label class="form-label" for="cover_img">Image Link</label>
-                <input class="form-control" type="textarea" name="cover_img" id="cover_img" value="<%= entry.cover_img %>"/>
-                <label class="form-label" for="cover_alt">Image Alt Description</label>
-                <input class="form-control" type="text" name="cover_alt" id="cover_alt" value="<%= entry.cover_alt %>"/>
-                
-                <div class="row">
                     <div class="col-sm-6">
-                        <label class="form-label" for="format">Format</label>
-                        <div class="input-group select-group">
+                        <div class="input-group">
+                            <label class="input-group-text" for="title">Title</label>
+                            <input class="form-control" type="text" name="title" id="title" value="<%= entry.title %>"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <label class="input-group-text" for="creator_name">Creator Name</label>
+                            <input class="form-control" type="text" name="creator_name" id="creator_name" value="<%= entry.creator_name %>"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <label class="input-group-text" for="creator_type">Creator Type</label>
+                            <input class="form-control" name="creator_type" id="creator_type" value="<%= entry.creator_type %>" autocomplete="off" onkeypress="if (event.keyCode == 13) return false;" />
+                            <select id="sel-creator-type" class="btn bg-ilib-primary text-ilib-primary"
+                                onchange="var textbox = document.getElementById('creator_type'); textbox.value = (this.selectedIndex == -1 ? '' : this.options[this.selectedIndex].value); textbox.select(); textbox.dispatchEvent(new Event('change'));"
+                                onclick="this.selectedIndex = -1;">
+                                <% let opt=''; %>
+                                <% if(dropdownData) { %>
+                                    <% for ( const el of dropdownData.creatorType ) { %>
+                                        <option value="<%= el %>"><%= el %></option>
+                                        <% }} %>  
+                            </select>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <label class="input-group-text" for="cover_img">Image Link</label>
+                        <input class="form-control" type="textarea" name="cover_img" id="cover_img" value="<%= entry.cover_img %>"/>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <label class="input-group-text" for="cover_alt">Image Alt Desc.</label>
+                        <input class="form-control" type="text" name="cover_alt" id="cover_alt" value="<%= entry.cover_alt %>"/>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <label class="input-group-text" for="format">Format</label>
                             <input class="form-control" name="format" id="format" value="<%= entry.format %>" autocomplete="off" onkeypress="if (event.keyCode == 13) return false;" />
-                            <select id="sel-format" class="form-control input-group-addon btn bg-ilib-primary text-ilib-primary"
+                            <select id="sel-format" class="btn bg-ilib-primary text-ilib-primary"
                                 onchange="var textbox = document.getElementById('format'); textbox.value = (this.selectedIndex == -1 ? '' : this.options[this.selectedIndex].value); textbox.select(); textbox.dispatchEvent(new Event('change'));"
                                 onclick="this.selectedIndex = -1;">
                                 <% opt=''; %>
@@ -63,10 +78,10 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <label class="form-label" for="location">location</label>
-                        <div class="input-group select-group">
+                        <div class="input-group">
+                            <label class="input-group-text" for="location">location</label>
                             <input class="form-control" name="location" id="location" value="<%= entry.location %>" autocomplete="off" onkeypress="if (event.keyCode == 13) return false;" />
-                            <select id="sel-location" class="form-control input-group-addon btn bg-ilib-primary text-ilib-primary"
+                            <select id="sel-location" class="btn bg-ilib-primary text-ilib-primary"
                                 onchange="var textbox = document.getElementById('location'); textbox.value = (this.selectedIndex == -1 ? '' : this.options[this.selectedIndex].value); textbox.select(); textbox.dispatchEvent(new Event('change'));"
                                 onclick="this.selectedIndex = -1;">
                                 <% opt=''; %>
@@ -78,11 +93,19 @@
                         </div>
                     </div>
                 </div>
-                <label class="form-label" for="tags">Tags<span><small>   (separate with ", ")</small></span> </label>
-                <input class="form-control" type="text" name="tags" id="tags" value="<%= entry.tags.join(', ') %>"/>
-                <label class="form-label" for="desc">Description</label>
-                <input class="form-control" type="textarea" name="desc" id="desc" value="<%= entry.desc %>"/>
-                <br>
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <label class="input-group-text" for="tags">Tags</label>
+                        <input class="form-control" type="text" name="tags" id="tags" placeholder="separate with comma, space" value="<%= entry.tags.join(', ') %>"/>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <label class="input-group-text" for="desc">Description</label>
+                        <input class="form-control" type="textarea" name="desc" id="desc" value="<%= entry.desc %>"/>
+                    </div>
+                </div>
                 <input class=" btn bg-ilib-primary text-ilib-primary" type="submit" value="Submit"/>
             </form>
         </div>
