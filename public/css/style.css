@@ -29,13 +29,10 @@ header {
     border-top-right-radius: 0;
 }
 
-/* .select-group input.form-control {
-    width: 65%;
+.contact-link {
+    width: 3rem;
+    margin: .5rem;
 }
-
-.select-group select.form-control {
-    width: 35%;
-} */
 
 .main-section {
     display: flex;
