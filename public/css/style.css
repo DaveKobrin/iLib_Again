@@ -29,13 +29,13 @@ header {
     border-top-right-radius: 0;
 }
 
-.select-group input.form-control {
+/* .select-group input.form-control {
     width: 65%;
 }
 
 .select-group select.form-control {
     width: 35%;
-}
+} */
 
 .main-section {
     display: flex;

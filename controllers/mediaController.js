@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Media = require('../models/media.js');
+const request = require('request');
 
 const getDropdownData = (req,res,next) => {
     const filter = {}; //filter to return all items if currentUser is admin
@@ -99,6 +100,34 @@ router.get('/:id/edit', authRequired, getDropdownData, (req,res)=>{
     })
 });
 
+// EDIT with API Data
+router.get('/:id/edit/:upc', authRequired, getDropdownData, (req,res)=>{
+    // console.log({upc: req.params.upc});
+    const userInfo = {userIsAdmin: req.session.currentUser.admin}
+    let data = request.post({
+        uri: 'https://api.upcitemdb.com/prod/trial/lookup',
+        headers: { "Content-Type": "application/json" },
+        gzip: true,
+        body: `{ "upc": "${req.params.upc}" }`,
+    }, (err, resp, body) => {
+        if (err) {
+            // console.log({err});
+            res.send(err);
+        }
+        else{
+            // console.log({resp});
+            // console.log({body});
+            Media.findById(req.params.id, (err, entry)=>{
+                if(err) res.send(err);
+                else {
+                    userInfo.user = entry.user
+                    res.render('media/editlookup.ejs',{ entry, dropdownData:req.body.dropdownData, userInfo, lookup: JSON.parse(body).items[0]});
+                }
+            })
+        }
+    });
+});
+
 // CREATE
 router.post('/', authRequired, (req,res)=>{
     if (!req.session.currentUser.admin) {
@@ -106,6 +135,20 @@ router.post('/', authRequired, (req,res)=>{
         req.body.tags = (typeof(req.body.tags)===Array?req.body.tags.join(', '):req.body.tags).split(', ');
         Media.create(req.body); 
         res.redirect('/media')
+    } else
+        res.send('admin users cannot create new entries');
+});
+
+// CREATE with API Lookup
+router.post('/edit/:upc', authRequired, async (req,res)=>{
+    if (!req.session.currentUser.admin) {
+        req.body.user = req.session.currentUser.username;
+        req.body.title = req.body.title || 'blank';
+        req.body.format = req.body.format || 'blank';
+        req.body.tags = (typeof(req.body.tags)===Array?req.body.tags.join(', '):req.body.tags).split(', ');
+        const result = await Media.create(req.body); 
+        // console.log({result});
+        res.redirect(`/media/${result._id}/edit/${req.params.upc}`)
     } else
         res.send('admin users cannot create new entries');
 });
